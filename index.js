@@ -119,9 +119,32 @@ Q6 list all the unique eye colors present in the collection
 Q7 what is the average number of tags per user?
 
 
+have practice 20+ question but due to some problem i lost data from this file 
+
+[
+  {
+    $match: {
+      tags:{
+        $all:["enim","id"]
+      }
+    }
+  }
+]
 
 
-
+{
+    $match: {
+      "company.location.country":"USA"
+    }
+  },
+  {
+    $group: {
+      _id:"$company.title",
+      countUser: {
+        $sum: 1
+      }
+    }
+  }
 
 
 
